@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剧情介绍</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .section2{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .section2 .bg-layer1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../IMG_20260201_165.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+    .section2 .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(254, 249, 230, 0.907);
+        z-index: 2;
+    }
+    .section2 .content .box{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    .section2 .content .box .box1{
+        position: relative;
+        width: 430px;
+    }
+    .section2 .content .box .box1 p{
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 50px;
+        transform: translateY(42px);
+    }
+    .section2 .content .box .box1 img{
+        width: 475px;
+        height: 610px;
+        margin-top: 80px;
+        margin-left: -22px;
+    }
+    .section2 .content .box .box1 .box1-a{
+        position: absolute;
+        top: 285px;
+        left: 100px;
+        width: 225px;
+        height: 290px;
+        font-size: 1.3rem;
+    }
+    .section2 .content .box .small-box{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .section2 .content .box .small-box .box2 img{
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+        transform: translate(170px,76px);
+        transition: all 1s;
+    }
+    .section2 .content .box .small-box .box2 img:hover{
+        transform: translate(170px,76px) rotate(306deg);
+    }
+    .section2 .content .box .small-box .box2 p{
+        width: 145px;
+        font-size: 2.5rem;
+        transform: translate(183px,93px);
+    }
+    .section2 .content .box .small-box .box3 .img{
+        width: 720px;
+        height: 280px;
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    .section2 .content .box .small-box .box3 .img1{
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+        transform: translate(295px,2px);
+        transition: all 1s;
+    }
+    .section2 .content .box .small-box .box3 .img1:hover{
+        transform: translate(295px,2px) rotate(306deg);
+    }
+    .section2 .content .box .small-box .box3 .p{
+        width: 145px;
+        font-size: 2.5rem;
+        transform: translate(306px,-3px);
+    }
+    .section2 .content .box .small-box .box3 .img2{
+        width: 395px;
+        transform: translate(20px,1px);
+    }
+    .section2 .content .box .small-box .box3 .p1{
+        width: 100px;
+        font-size: 1.5rem;
+        transform: translate(173px,1px);
+    }
+    .section2 .content .box .small-box .box3 .img3{
+        width: 405px;
+        transform: translate(360px,-45px);
+    }
+    .section2 .content .box .small-box .box3 .p2{
+        width: 100px;
+        font-size: 1.5rem;
+        transform: translate(552px,-43px);
+    }
+    .section2 .content .box .small-box .box4 img{
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+        transform: translate(61px,73px);
+        transition: all 1s;
+    }
+    .section2 .content .box .small-box .box4 img:hover{
+        transform: translate(61px,73px) rotate(306deg);
+    }
+    .section2 .content .box .small-box .box4 p{
+        width: 160px;
+        font-size: 2.5rem;
+        transform: translate(58px,93px);
+    }
+</style>
+<body>
+    <div class="section2">
+        <div class="bg-layer1"></div>
+        <div class="content">
+            <div class="box">
+                <div class="box1">
+                    <p>剧情介绍</p>
+                    <div class="box1-a">《沧元图》已更部分，整体讲述了自幼目睹妖族屠村的孟川，为斩尽妖邪在东宁府修行成长，在经历了东林府大战后获得进元初山的资格。
+                        孟川在元出山精进修为，深挖身世与沧源届本源，最后在经历了磨难后，前往救援两界岛。
+                        至此已完整勾勒出少年从地方修士成长为人族中坚的斩妖救世之路。
+                    </div>
+                    <img src="../img3.png" alt="">
+                </div>
+                <div class="small-box">
+                    <div class="box2">
+                        <div>
+                            <img src="../IMG_20260201_172436.jpg" alt="">
+                            <p>两届岛</p>
+                        </div>
+                    </div>
+                    <div class="box3">
+                        <img src="../IMG_20260201_192056.jpg" alt="" class="img">
+                        <img src="../IMG_20260201_172333.jpg" alt="" class="img1">
+                        <p class="p">元初山</p>
+                        <img src="../IMG_20260201_173103.jpg" alt="" class="img2">
+                        <p class="p1">元初城</p>
+                        <img src="../IMG_20260201_170540.jpg" alt="" class="img3">
+                        <p class="p2">东宁府</p>
+                    </div>
+                    <div class="box4">
+                        <img src="../IMG_20260201_172409.jpg" alt="">
+                        <p>黑沙洞天</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

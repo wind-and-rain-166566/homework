@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沧元图</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .section1{
+        position: relative;
+        min-height: 100vh;
+    }
+    .section1 .bg-layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+    .section1 .bg-layer::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(13, 13, 13, 0.47);
+        z-index: 2;
+    }
+    .section1 .content{
+        position: relative;
+        z-index: 3;
+        min-height: 100vh;
+    }
+    .title1{
+        display: flex;
+        position: fixed;
+        width: 100%;
+    }
+    .title1 ul{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .section1 .content .title1 ul li a{
+        color: rgb(155 195 227);
+    }
+    .section1 .content .title1 ul li:hover{
+        transform: translatey(5px) scale(1.02);
+    }
+    .item1 img{
+        display: block;
+        height: 50px;
+        width: 120px;
+        border-radius: 0 0 16px 0;
+        box-shadow: 5px 5px 10px 4px rgb(21 20 23 / 72%);
+    }
+    .section1 .content .title1 ul li{
+        height: 30px;
+        width: 100px;
+        background-color: rgba(250, 240, 228, 0.30);
+        border-radius: 18px;
+        text-align: center;
+    }
+    .section1 .content .content1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+     }
+    .section1 .content .content1 .car{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 60px;
+        gap: 18px;
+     }
+    .section1 .content .content1 .car img{
+        display: block;
+        width: 485px;
+        height: 240px;
+        border-radius: 8px;
+        box-shadow: -2px -2px 10px 3px rgb(21 20 23 / 72%);
+        transition: all .6s;
+    }
+    .section1 .content .content1 .car img:hover{ 
+        transform: translateX(-50px)  scale(1.2) ;
+        box-shadow: -5px -5px 10px 4px rgb(21 20 23 / 72%);
+    }
+    .section1 .content .content1 .box1{
+        width: 335px;
+        height: 780px; 
+        margin-left: 10px; 
+        background-color: rgb(255 255 255 / 50%);
+        box-shadow: 0px 0px 4px 4px rgb(245 245 245 / 43%);
+        border-radius: 18px;
+        font-size: 1.1rem;
+        transform: translateY(80px);
+        transition: all .6s;
+    }
+    .section1 .content .content1 .box1:hover{
+        transform: translateY(80px) scale(1.01);
+        box-shadow: 4px 4px 4px 4px rgba(245, 245, 245, 0.507);
+    }
+    .section1 .content .content1 .box1 ul li:first-child{
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .section1 .content .content1 .box1 ul li{
+        margin-left: 15px;
+    }
+    .section1 .content .content1 .box1 ul li a{
+        display: block;
+        color: black;
+    }
+    .section1 .content .content1 .box1 ul li a:hover{
+        transform: scale(1.1);
+        color: #104ab7;
+        background-color: rgba(255, 255, 255, 0.425);
+        border-radius: 16px;
+    }
+    .section1 .content .content1 .box2{
+        transform: translateY(230px);
+        width: 335px;
+        height: 700px;
+        margin-left: -30px;
+        background-color: rgb(255 255 255 / 42%);
+        box-shadow: 5px 5px 4px 4px rgb(245 245 245 / 43%);
+        border-radius: 16px;
+        font-size: 1.1rem;
+        transition: all .6s;
+    }
+    .section1 .content .content1 .box2:hover{
+        transform: translateY(200px) scale(1.01);
+        box-shadow: 5px 5px 4px 4px rgba(245, 245, 245, 0.507);
+    }
+    .section1 .content .content1 .box2 ul li a:hover{
+        transform: scale(1.1);
+        color: #104ab7;
+        background-color: rgba(255, 255, 255, 0.425);
+        border-radius: 16px;
+    }
+    .section1 .content .content1 .box2 ul li:first-child{
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .section1 .content .content1 .box2 ul li{
+        margin-left: 15px;
+    }
+    .section1 .content .content1 .box2 ul li a{
+        display: block;
+        color: black;
+    }
+    .section1 .content .content1 .box3{
+        position: relative;
+        transform: translateY(550px);
+        width: 700px;
+        height: 355px;
+        margin-right: 80px;
+        background-color: wheat;
+        border-radius: 18px;
+        box-shadow: 0px 0px 2px 2px rgb(245 245 245 / 43%);
+        overflow: hidden;
+        transition: all .5s;
+    }
+    .section1 .content .content1 .box3:hover{
+        transform: translateY(380px) scale(1.2);
+    }
+
+    @keyframes slidean{
+        0% {opacity: 0;}
+        12.5% {opacity: 1;}
+        37.5% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 0;}
+    }
+    .section1 .content .content1 .box3 .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        animation: slidean 12s infinite;
+    }
+    .section1 .content .content1 .box3 .slide:nth-child(1){
+        animation-delay: 0s;
+    }
+    .section1 .content .content1 .box3 .slide:nth-child(2){
+        animation-delay: 3s;
+    }
+    .section1 .content .content1 .box3 .slide.slide:nth-child(3){
+        animation-delay: 6s;
+    }
+    .section1 .content .content1 .box3 .slide.slide:nth-child(4){
+        animation-delay: 9s;
+    }
+    .section1 .content .content1 .box3 .slide img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .section1 .content .content1 .box3 .slide3{
+        background-color: rgb(184, 110, 12);
+    }
+    .section1 .content .item2{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .section1 .content .item2 img{
+        display: block;
+        background-position: right;
+        text-align: right;
+        background-repeat: no-repeat;
+        background-size:contain;
+        height: 145px; 
+        width: 307px;
+        border-radius: 16px;
+        transform: translateY(20px);
+      
+    }
+    .section1 .content::after{
+        content: 'DESIGED BY 沧元图 @ SWUST';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 33px;
+        background: linear-gradient(180deg,
+        #b1f1fa 0%, 
+        #85c4e1 40%, 
+        #4ab7d8 60%,
+        #6495ED 100% );
+        text-align: center;
+        letter-spacing: 8px;
+        border-radius: 100px 100px 0 0;
+        box-shadow: 0 0 5px 5px rgba(114, 197, 236, 0.604);
+    }
+    </style>
+<body>
+    <div class="section1">
+        <div class="bg-layer"></div>
+        <div class="content">
+            <div class="title1">
+                <div class="item1">
+                    <img src="../img1.png" alt="">
+                </div>
+                <ul>
+                    <li><a href="./scenario.html">剧情介绍</a></li>
+                    <li><a href="./person.html">人物介绍</a></li>
+                    <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">点击观看</a></li>
+                </ul>
+            </div>
+            <div class="content1">
+                <div class="box1">
+                    <ul>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">第一季</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ0ODYwNzc1Mg==.html?spm=a2hkm.8166622.PhoneSokuProgram_1.dchapters_31&s=adaec02f09f9469ab8d8">EP01 是挺二的</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ0MTIxNjAzMg==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ0MTIxNjAzMg==&spm=a2hkt.13141534.1_7.d_1_32">EP02 我们总是不说话</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ0NDIxOTc3Ng==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ0NDIxOTc3Ng==&spm=a2hkt.13141534.1_7.d_1_33">EP03 来吧 二狗</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ0NDIxODE2MA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ0NDIxODE2MA==&spm=a2hkt.13141534.1_7.d_1_34">EP04 来，扭一下</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP05 你最好打死我</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP06 是真想打死我啊（还不够）</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP07 假的真不了，真的假不了</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP08 你们真靠谱</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP09 我回来了</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP10 算什么</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP11 原来是你啊</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP12 拜拜了您嘞</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP13 你脑子呢</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP14 待会儿  为你送终</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ1NDI0NTU3Mg==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ1NDI0NTU3Mg==&spm=a2hkt.13141534.1_7.d_1_45"></a>EP15 他的人生  只盛开了两天</li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ2MTc0MzQzMg==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ2MTc0MzQzMg==&spm=a2hkt.13141534.1_7.d_1_46"></a>EP16 万语千言</li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP17 走，去杀光它们</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP18  一定掀翻他们</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP19 你需要赢</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP20 你们都会没事的！</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP21 蠢货！你才是那个蠢货</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ3Njc5Mjg2MA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ3Njc5Mjg2MA==&spm=a2hkt.13141534.1_7.d_1_52">EP22 寳宝兄妹</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP23 你满意吗</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ2OTA2MzEwMA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ2OTA2MzEwMA==&spm=a2hkt.13141534.1_7.d_1_54">EP24 来战</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ3Njc5MTI4NA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ3Njc5MTI4NA==&spm=a2hkt.13141534.1_7.d_1_55">EP25 南無阿弥陀佛</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ3Njc4OTk0NA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ3Njc4OTk0NA==&spm=a2hkt.13141534.1_7.d_1_56">EP26 这条路，由我走下去</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ2OTA2MzEwOA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ2OTA2MzEwOA==&spm=a2hkt.13141534.1_7.d_1_57">EP27 孤独的王</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ3NjAyNDI0OA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ3NjAyNDI0OA==&spm=a2hkt.13141534.1_7.d_1_58">EP28 朝阳向你</a></li>
+                        <li><a href="https://v.youku.com/v_show/id_XNjQ3NjAyNDI2MA==.html?s=adaec02f09f9469ab8d8&scm=20140719.apircmd.298639.video_XNjQ3NjAyNDI2MA==&spm=a2hkt.13141534.1_7.d_1_59">EP29 新的路</a></li>
+                    </ul>
+                </div>
+                <div class="box2">
+                    <ul>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">第二季</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP01 所有的妖怪都得死</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP02 今晚来点狠的</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP03 垃圾麻烦带一下</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP04 砍你呀的</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP05 师兄，未来是你的</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP06 你生的好儿子</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP07 作弊！肯定是作弊</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP08 金主饲养的杀手</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP09 可爱我也照砍</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP10 你吃，不，你吃</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP11 对不齐。。。鸭</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP12 一根毛都不会少</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP13 明天会是个好天气</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP14 哇哦，有人被吓到了</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP15 杀他个片甲不留</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP16 你被月亮砸过吗</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP17 杀了你，我就是神尊</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP18 今晚月色好美</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP19 在我眼里，你脏得碍眼</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP20 够不够惊喜</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP21 和你踢球，我很开心</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP22 我喜欢你</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP23 所有的妖怪都得死</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP24 宁为玉碎，不为瓦全</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP25 我也喜欢你</a></li>
+                        <li><a href="https://so.youku.com/search/q_%E6%B2%A7%E5%85%83%E5%9B%BE">EP26 现在，未来</a></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                        <div class="slide">
+                            <img src="../IMG_20260201_153128.jpg" alt="" class="img1">
+                        </div>
+                        <div class="slide">
+                            <img src="../IMG_20260201_153143.jpg" alt="" class="img2">
+                        </div>
+                        <div class="slide">
+                            <img src="../IMG_20260201_153158.jpg" alt="" class="img3">
+                        </div>
+                        <div class="slide">
+                            <img src="../IMG_20260201_153216.jpg" alt="" class="img4">
+                        </div>
+                </div>
+
+                <div class="car">
+                    <div class="car1">
+                        <img src="../IMG_20260131_171655.jpg" alt="">
+                    </div>
+                    <div class="car1">
+                        <img src="../IMG_20260131_171641.jpg" alt="">
+                    </div>
+                    <div class="car1">
+                        <img src="../IMG_20260131_171629.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <img src="../img1.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介绍</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    body{
+        width: 100vh;
+        margin: 0;
+    }
+    .section3{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../Camera_XHS_17699563964241040g2sg316fdm3migudg5nqe.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .section3 .car1{
+        width: 100%;
+        height: 1010px;
+    }
+    .section3 .car1 img{
+        width: 314px;
+        height: 468px;
+        border-radius: 18px;
+        transform: translate(25px,10px);
+    }
+    .section3 .car1 .img1{
+        transition: all .5s;
+    }
+    .section3 .car1 .img1:hover{
+        transform: translate(25px,20px) scale(1.1);
+        box-shadow: 0 0 3px 3px rgba(4, 4, 4, 0.582);
+    }
+    .section3 .car1 .img2{
+        margin-top: 15px;
+        transition: all .5s;
+    }
+    .section3 .car1 .img2:hover{
+        transform: translate(25px,-40px) scale(1.1);
+        box-shadow: 0 0 3px 3px rgba(4, 4, 4, 0.582);
+    }
+    .section3 .car2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 10px;
+        width: 100%;
+        height: 1010px;
+    }
+    .section3 .car2 .box1{
+        height: 325px;
+        background-image: url("../IMG_20260201_210713.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 [class^="box"]:hover{
+        transform: scale(1.2);
+        box-shadow: 0 0 3px 3px rgba(4, 4, 4, 0.582);
+    }
+    .section3 .car2 .box2{
+        height: 325px;
+        background-image: url("../IMG_20260201_210739.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box3{
+        height: 325px;
+        background-image: url("../IMG_20260201_210833.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box4{
+        height: 325px;
+        background-image: url("../IMG_20260201_210922.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box5{
+        height: 325px;
+        background-image: url("../IMG_20260201_210800.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box6{
+        height: 325px;
+        background-image: url("../IMG_20260201_210847.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box7{
+        height: 325px;
+        background-image: url("../IMG_20260201_210908.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box8{
+        height: 325px;
+        background-image: url("../IMG_20260201_210820.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .section3 .car2 .box9{
+        height: 325px;
+        background-image: url("../Camera_1040g3k031g8po6e5hk6g5p4ehib7ojmhub95lpo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all .5s;
+        border-radius: 10px;
+    }
+
+</style>
+<body>
+    <div class="section3">
+            <div class="car1">
+                <img src="../IMG_20260201_211100.jpg" alt="" class="img1">
+                <img src="../IMG_20260201_211043.jpg" alt="" class="img2">
+            </div>
+           <div class="car2">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+                <div class="box6"></div>
+                <div class="box7"></div>
+                <div class="box8"></div>
+                <div class="box9"></div>
+           </div>
+    </div>
+</body>
+</html>
